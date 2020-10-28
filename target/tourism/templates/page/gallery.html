@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<title>Gallery</title>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Your description"/>
+<meta name="keywords" content="Your keywords"/>
+<meta name="author" content="Your name"/>
+
+  <link href="/css/touchTouch.css" th:href="@{/css/touchTouch.css}" rel="stylesheet"/>
+  <link href="/css/isotope.css" th:href="@{/css/isotope.css}" rel="stylesheet"/>
+  <script src="/js/touchTouch.jquery.js" th:src="@{/js/touchTouch.jquery.js}"></script>
+  <script src="/js/isotope.pkgd.min.js" th:src="@{/js/isotope.pkgd.min.js}"></script>
+  <script src="/js/imagesloaded.pkgd.js" th:src="@{/js/imagesloaded.pkgd.js}"></script>
+
+</head>
+<body class="not-front page-gallery">
+
+<div id="main">
+  <!-- head 头部 -->
+  <div id="head" th:include="common/index_header :: copy"></div>
+
+<div id="parallax2" class="parallax">
+  <div class="bg2 parallax-bg"></div>
+  <div class="overlay"></div>
+  <div class="parallax-content">
+    <div class="container">
+
+    </div>
+  </div>
+</div>
+
+<div class="breadcrumbs1_wrapper">
+  <div class="container">
+    <div class="breadcrumbs1"><a href="index.html">Home</a><span>/</span>Gallery</div>
+  </div>
+</div>
+
+<div id="content">
+  <div class="container">
+
+    <!--<div id="options" class="clearfix">
+        <ul id="filters" class="pagination option-set clearfix" data-option-key="filter">
+          <li><a href="#filter" data-option-value="*" class="selected">All</a></li>
+          <li><a href="#filter" data-option-value=".isotope-filter1">tours</a></li>
+          <li><a href="#filter" data-option-value=".isotope-filter2">cruises</a></li>
+          <li><a href="#filter" data-option-value=".isotope-filter3">hotels</a></li>
+        </ul>
+      </div>--><!-- #options -->
+
+      <div class="isotope-box">
+        <div id="container" class="clearfix">
+          <ul class="thumbnails clearfix" id="isotope-items">
+              <li class="element isotope-filter3 col-sm-4 col-xs-12" th:each="item : ${page.content}">
+                <div class="thumb-isotope">
+                  <div class="thumbnail clearfix">
+                    <a href="images/gallery01.jpg" th:href="${'http://localhost:8083/images/'+item.img}" rel="prettyPhoto[mix]" title="Photo" target="_blank">
+                      <figure>
+                        <img th:src="${'http://localhost:8083/images/'+item.img}"  alt=""/><em></em>
+                      </figure>
+                      <div class="caption">
+                        <div class="txt1" th:text="${item.title}">cannes, france</div>
+                        <div class="txt2" th:text="${item.detail}">hotel carlton</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+          </ul>
+        </div>
+      </div>
+
+  </div>
+</div>
+
+
+<div class="bot2_wrapper">
+  <div class="container">
+    <div class="left_side">
+      Copyright &copy; 2020.Company name All rights reserved.<a target="_blank" href=""></a>
+    </div>
+    <div class="right_side"></div>
+  </div>
+</div>
+</div>
+<script src="/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+<script type="text/javascript" src="../componets/business/gallery.js" ></script>
+</body>
+</html>

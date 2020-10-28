@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<title>Contacts</title>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Your description"/>
+<meta name="keywords" content="Your keywords"/>
+<meta name="author" content="Your name"/>
+
+<script src="js/cform.js" th:src="@{/js/cform.js}"></script>
+<script src="http://ditu.google.cn/maps/api/js?sensor=false.js"></script>
+<script src="js/googlemap.js" th:src="@{/js/googlemap.js}"></script>
+
+</head>
+<body class="not-front page-contacts">
+
+<div id="main">
+  <div id="head" th:include="common/index_header :: copy"></div>
+  <!--<div id="google_map_wrapper"><div id="google_map"></div></div>-->
+
+  <div class="breadcrumbs1_wrapper">
+    <div class="container">
+      <div class="breadcrumbs1"><a href="index.html">Home</a><span>/</span>反馈</div>
+    </div>
+  </div>
+
+<div id="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h3>反馈信息</h3>
+        <p>
+          感谢您的反馈, 对于您在本网站提交的反馈信息我们将很快处理，如您急需联系我们，请拨打下面的客服电话，或者发送邮件给我们。s dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum
+        </p>
+        <br/>
+        <h4>地址</h4>
+        <p>
+          795 Fake Ave, Door 6<br/>
+          Wonderland, CA 94107, USA<br/>
+          <a href="#">info@yourdomain.com</a>
+        </p>
+        <h4>电话</h4>
+        <p>
+          +440 875369208<br/>
+          +440 353363114
+        </p>
+        <!--<div class="social3_wrapper">
+          <ul class="social3 clearfix">
+            <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
+          </ul>
+        </div>-->
+      </div>
+      <div class="col-sm-6">
+        <h3>请填写反馈信息</h3>
+        <div id="note"></div>
+        <div id="fields">
+          <form id="ajax-contact-form" class="form-horizontal" action="../resFeedback/addFeedBack" method="post">
+            <div class="form-group">
+                <label for="inputName">您的姓名</label>
+                <input type="text" class="form-control" id="inputName" name="name" value="Full Name" onBlur="if(this.value=='') this.value='Full Name'" onFocus="if(this.value =='Full Name' ) this.value=''"/>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail">您的邮箱</label>
+                <input type="text" class="form-control" id="inputEmail" name="email" value="E-mail address" onBlur="if(this.value=='') this.value='E-mail address'" onFocus="if(this.value =='E-mail address' ) this.value=''"/>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="inputMessage">反馈内容</label>
+                    <textarea class="form-control" rows="7" id="inputMessage" name="content" onBlur="if(this.value=='') this.value='Message'"
+                                onFocus="if(this.value =='Message' ) this.value=''">Message</textarea>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn-default btn-cf-submit">send message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="bot2_wrapper">
+  <div class="container">
+    <div class="left_side">
+      Copyright &copy; 2020.Company name All rights reserved.<a target="_blank" href=""></a>
+    </div>
+    <div class="right_side"></div>
+  </div>
+</div>
+</div>
+<script src="/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+</body>
+</html>
