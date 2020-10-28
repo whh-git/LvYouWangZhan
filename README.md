@@ -13,7 +13,6 @@
 ## 1.第一次启动需添加第三方接口showapi.jar（在线查询景点功能）  
 如图右键添加到library（在线查询景点请往下看）   
 启动后报错showapi可将jar复制到Tomcat的lib下再尝试   
-## 2.第一次启动务必在desktop表添加一条数据，否则访问首页会报错  
 # 图片不显示  
 部分图片加载不出来是因为springmvc拦截   
 在Tomcat下webapps目录下创建images目录用来存放上传的图片 idea配置Tomcat的images路径  
