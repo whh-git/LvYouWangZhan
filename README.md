@@ -29,3 +29,4 @@ https://blog.csdn.net/weixin_36413887/article/details/79713234
 最后一步：在旅游项目中找到 ApiData这个类 ，替换用自己的id和秘钥  
 ![](https://github.com/jwwam/tourism/blob/master/src/main/webapp/images/showapi2.png)   
 测试：在首页景点查询模块  输入地名，然后看有没有景点页面显示   
+提供有偿部署qq：1030247226
